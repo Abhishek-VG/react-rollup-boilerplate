@@ -1,6 +1,6 @@
 ## Welcome to react-rollup-boilerplate
 
-This is a project which intends to help developers who wants to create a library using rollup.
+This is the project which intends to help developers who wants to create libraries using rollup.
 
 
 ### Steps to run the project
