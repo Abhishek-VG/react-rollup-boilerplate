@@ -10,5 +10,5 @@ Clone or Download the project
 
 # cd <dir>
 # npm install
-# npm start 
+# "npm start" (for dev environment) or "npm run build" (for build)
 ```
