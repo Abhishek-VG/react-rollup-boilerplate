@@ -2,10 +2,12 @@
   "name": "react-rollup",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "build/dist/index.js",
+  "module": "build/dist/index.es.js",
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -cw"
+    "clean": "node ./clean",
+    "build": "npm run clean && rollup -c rollup.config.prod.js",
+    "start": "rollup -c rollup.config.dev.js -w"
   },
   "author": "Abhishek VG",
   "license": "MIT",
@@ -13,20 +15,28 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "rollup": "^1.6.0",
     "rollup-copy-plugin": "^0.1.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-generate-html-template": "1.1.0",
+    "rollup-plugin-img": "^1.1.0",
     "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-url": "^2.2.0",
     "rollup-watch": "^4.3.1"
   },
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
-  }
+  },
+  "files": [
+    "build/dist",
+    "package.json"
+  ]
 }
