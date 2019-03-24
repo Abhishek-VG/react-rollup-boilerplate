@@ -1,11 +1,5 @@
 const fs = require('fs');
 
-/**
- * delete build folder if exist
- * @param {*} path 
- * 
- * @author samuel
- */
 function deleteFolderRecursive(path) {
   if (fs.existsSync(path) && fs.lstatSync(path).isDirectory()) {
     fs.readdirSync(path).forEach(function(file, index){
