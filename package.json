@@ -2,11 +2,12 @@
   "name": "react-rollup",
   "version": "0.0.1",
   "description": "",
+  "types": "build/dist/types/index.d.ts",
   "main": "build/dist/index.js",
   "module": "build/dist/index.es.js",
   "scripts": {
     "clean": "node ./clean",
-    "build": "npm run clean && rollup -c rollup.config.prod.js",
+    "build": "npm run clean && tsc && rollup -c rollup.config.prod.js",
     "start": "rollup -c rollup.config.dev.js -w"
   },
   "author": "Abhishek VG",
@@ -15,6 +16,9 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.3",
     "rollup": "^1.6.0",
     "rollup-copy-plugin": "^0.1.0",
     "rollup-plugin-babel": "^4.3.2",
@@ -28,8 +32,10 @@
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript": "^1.0.0",
     "rollup-plugin-url": "^2.2.0",
-    "rollup-watch": "^4.3.1"
+    "rollup-watch": "^4.3.1",
+    "typescript": "^3.3.4000"
   },
   "dependencies": {
     "react": "^16.8.4",

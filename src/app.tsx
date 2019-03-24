@@ -1,9 +1,14 @@
 import React from "react";
 import "./style.css";
 
-export default class App extends React.Component {
+interface X {
+  name?: string
+}
+export default class App extends React.Component<X, any> {
   render() {
-    const x = () => {console.log('calling india')};
+    const x = () => {
+      console.log("calling india");
+    };
     x();
     return (
       <React.Fragment>

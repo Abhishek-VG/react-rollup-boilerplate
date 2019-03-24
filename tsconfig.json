@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/lib",
+    "declaration": true,
+    "declarationDir": "./build/dist/types/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node"
+  },
+  "include": ["./src/**/*"]
+}

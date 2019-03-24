@@ -21,7 +21,7 @@ import image from "rollup-plugin-img";
 
 export const commonPlugins = [
   // resolves the modules
-  resolve(),
+  resolve({ extensions: [".js", ".jsx", ".ts", ".tsx"] }),
   // helps in importing json files
   json(),
   // helps in importing image/svg files
@@ -45,7 +45,8 @@ export const commonPlugins = [
   }),
   // helps in configuring babel into the project
   babel({
-    exclude: "node_modules/**"
+    exclude: "node_modules/**",
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   }),
   // helps in converting commonjs to es
   commonjs(),

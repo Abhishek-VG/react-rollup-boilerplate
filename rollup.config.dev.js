@@ -20,7 +20,7 @@ import { commonPlugins } from "./rollup.config.common";
 
 export default {
   // entry of rollup
-  input: "src/index.js",
+  input: "src/index.tsx",
   // output of rollup
   output: {
     file: "dev/bundle.js",

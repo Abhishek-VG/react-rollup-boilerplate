@@ -12,7 +12,7 @@ import pkg from './package.json';
 
 export default {
   // entry of rollup
-  input: "src/index.js",
+  input: "src/index.tsx",
   // output of rollup
   output: [
     {
@@ -26,7 +26,7 @@ export default {
   ],
   plugins: [
     ...commonPlugins,
-    // helps insetting env value which triggers optimization of react code
+    // helps inserting env value which triggers optimization of react code
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
